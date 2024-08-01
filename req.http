@@ -1,0 +1,30 @@
+GET http://localhost:5022/games
+
+###
+GET http://localhost:5022/games/6
+
+###
+POST http://localhost:5022/games
+Content-Type: application/json
+
+{
+    "name": "PUBG",
+    "genre": "Shooter",
+    "price": 49.99,
+    "release_date": "2011-11-18"
+
+}
+
+###
+PUT http://localhost:5022/games/3
+Content-Type: application/json
+
+{
+    "name": "Final Fantasy Discounted",
+    "genre": "Roleplay",
+    "price": 19.99,
+    "releaseDate": "1997-05-21"
+}
+
+###
+DELETE http://localhost:5022/games/3
