@@ -1,17 +1,17 @@
-using Toprak.Api;
-using Toprak.Api.Data;
-using Toprak.Api.Endpoints;
+using Verim.Api.Data;
+using Verim.Api.Endpoints;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connString = builder.Configuration.GetConnectionString("GameStore");
-builder.Services.AddSqlite<GameStoreContext>(connString);
+var connString = builder.Configuration.GetConnectionString("Verim");
+builder.Services.AddSqlite<VerimContext>(connString);
 
 var app = builder.Build();
 
-app.MapGetEndpoints();
+app.MapAuthenticationEndpoints();
+app.MapMainEndpoints();
 
-app.MigrateDb();
+app.MigrateDB();
 
 app.Run();

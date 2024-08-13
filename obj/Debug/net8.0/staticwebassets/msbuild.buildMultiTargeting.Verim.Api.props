@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Verim.Api.props" />
+</Project>
