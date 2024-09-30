@@ -21,7 +21,7 @@ public static class AuthenticationHelper
 
     //This function finds the related user from the database and assigns a random token for future login.
     //returns AuthenticationResult with IsValid true/false, Token empty_string/random_token, ErrorMessage null/error_message
-    public static AuthenticationResult AuthenticateUser(VerimContext dbcontext, CredentialsDto credentials)
+    public static AuthenticationResult AuthenticateUser(VerimContext dbcontext, LoginCredentialsDto credentials)
     {
         var user = dbcontext.Users.FirstOrDefault(u => u.Username == credentials.Username 
                                                         && u.Password == credentials.Password);
@@ -38,6 +38,7 @@ public static class AuthenticationHelper
 
         return new AuthenticationResult { IsValid = true, Token = token };
     }
+    
 }
 
 public class AuthenticationResult

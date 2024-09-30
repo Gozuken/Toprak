@@ -1,19 +1,20 @@
-GET http://localhost:5197/main/assets
-Cookie: AuthToken=wzwmqrDnV298VbIkSUKs++KRqs16WCONwStC9XAqg+g=
 
-
+GET http://localhost:5197/main/assets/top_products/akyurt22
+Cookie: AuthToken=asd
+###
+GET http://localhost:5197/main/assets/neighborhoodOptions
 
 ###
 POST http://localhost:5197/login
 Content-Type: application/json
 
 {
-    "Username": "admin",
-    "Password": "password" 
+    "Username": "test",
+    "Password": "123" 
 }
 
 ###
-POST http://localhost:5197/login
+POST http://localhost:5197/register
 Content-Type: application/json
 
 {
@@ -22,14 +23,57 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:5197/main
+POST http://localhost:5197/main/assets
 Content-Type: application/json
+Cookie: AuthToken=asd
 
 {
-    "Type": "tarla",
-    "Province": "adana",
-    "District": "gol",
-    "Neighborhood": "bru",
-    "Block": "312",
-    "Parcel": "444" 
+  "assetType": "Bağ",
+  "provinceName": "Ankara",
+  "districtName": "Gölbaşı",
+  "neighborhoodName": "Seğmenler",
+  "blockNumber": "000",
+  "parcelNumber": "000",
+  "plantedProduct": ""
 }
+
+
+###
+POST http://localhost:5048/editAssets
+Content-Type: application/json
+Cookie: AuthToken=Sk8blM1OdDL2JVbY8wCJ2hqCcfu4gd9yXqA5HUWYQ+8=
+
+{
+  "assetType": "Bağ",
+  "provinceName": "Ankara",
+  "districtName": "Gölbaşı",
+  "neighborhoodName": "Seğmenler",
+  "blockNumber": "000",
+  "parcelNumber": "000",
+  "plantedProduct": ""
+}
+
+###
+POST https://places.googleapis.com/v1/places:searchText 
+Content-Type: application/json
+X-Goog-Api-Key: AIzaSyApekf_lfBpdxJsc_k3yBQDlvgc3_Jw9Ws
+X-Goog-FieldMask: places.displayName,places.formattedAddress
+languageCode: tr
+
+{
+  "textQuery" : "ankara"
+}
+
+###
+GET https://maps.googleapis.com/maps/api/js?key=AIzaSyApekf_lfBpdxJsc_k3yBQDlvgc3_Jw9Ws&libraries=places
+
+###39.9334° N, 32.8597° E
+GET https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&daily=temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo
+
+Ankara Gölbaşı Seğmenler Parcel no
+
+###
+GET https://cbsapi.tkgm.gov.tr/megsiswebapi.v3.1/api/idariYapi/ilListe
+
+###
+GET 

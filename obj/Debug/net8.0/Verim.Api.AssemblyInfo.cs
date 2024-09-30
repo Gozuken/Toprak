@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Verim.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be355b9d42720898ce8b0d7dfc4d4caab65bb67e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c30dff92118bae7c1ff7055e2df15a285171cb72")]
 [assembly: System.Reflection.AssemblyProductAttribute("Verim.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Verim.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
